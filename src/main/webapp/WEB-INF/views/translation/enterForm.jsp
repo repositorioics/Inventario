@@ -11,7 +11,7 @@
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<jsp:include page="../fragments/headTag.jsp" />
+<jsp:include page="../../fragments/headTag.jsp" />
 <!-- BEGIN PAGE LEVEL STYLES -->
 <!-- END PAGE LEVEL STYLES -->
 </head>

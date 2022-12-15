@@ -50,12 +50,12 @@ public class ExcelBuilder extends AbstractExcelView {
         Font boldFont = workbook.createFont();
         boldFont.setFontName( "Arial" );
         boldFont.setFontHeight( (short) (12 * 20) );
-        boldFont.setColor( HSSFColor.BLACK.index );
+        boldFont.setColor(HSSFColor.HSSFColorPredefined.BLACK.getIndex());
         boldFont.setBold(true);
 
 
         CellStyle headerStyle = workbook.createCellStyle();
-        headerStyle.setFillForegroundColor( HSSFColor.GREY_25_PERCENT.index );
+        headerStyle.setFillForegroundColor( HSSFColor.HSSFColorPredefined.GREY_25_PERCENT.getIndex());
         headerStyle.setFillPattern( FillPatternType.SOLID_FOREGROUND );
         headerStyle.setAlignment( HorizontalAlignment.CENTER );
         headerStyle.setBorderBottom( BorderStyle.THIN );
@@ -65,11 +65,11 @@ public class ExcelBuilder extends AbstractExcelView {
         Font font = workbook.createFont();
         font.setFontName( "Arial" );
         font.setFontHeight( (short) (11 * 20) );
-        font.setColor( HSSFColor.BLACK.index );
+        font.setColor( HSSFColor.HSSFColorPredefined.BLACK.getIndex() );
         headerStyle.setFont( font );
 
         CellStyle headerStyle2 = workbook.createCellStyle();
-        headerStyle2.setFillForegroundColor( HSSFColor.GREY_25_PERCENT.index );
+        headerStyle2.setFillForegroundColor( HSSFColor.HSSFColorPredefined.GREY_25_PERCENT.getIndex() );
         headerStyle2.setFillPattern( FillPatternType.SOLID_FOREGROUND );
         headerStyle2.setAlignment( HorizontalAlignment.CENTER );
         headerStyle2.setBorderBottom( BorderStyle.THIN );
@@ -82,7 +82,7 @@ public class ExcelBuilder extends AbstractExcelView {
         font = workbook.createFont();
         font.setFontName( "Calibri" );
         font.setFontHeight( (short) (11 * 20) );
-        font.setColor( HSSFColor.BLACK.index );
+        font.setColor( HSSFColor.HSSFColorPredefined.BLACK.getIndex() );
 
         CellStyle dateCellStyle = workbook.createCellStyle();
         CreationHelper createHelper = workbook.getCreationHelper();
@@ -150,14 +150,14 @@ public class ExcelBuilder extends AbstractExcelView {
 
         // create style for title cells
         CellStyle titleStyle = workbook.createCellStyle();
-        titleStyle.setFillForegroundColor(HSSFColor.GREEN.index);
+        titleStyle.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREEN.getIndex());
         titleStyle.setFillPattern( FillPatternType.SOLID_FOREGROUND );
         titleStyle.setAlignment( HorizontalAlignment.CENTER );
         font = workbook.createFont();
         font.setFontName( "Arial" );
         font.setBold( true );
         font.setFontHeight( (short) (12 * 18) );
-        font.setColor( HSSFColor.BLACK.index );
+        font.setColor( HSSFColor.HSSFColorPredefined.BLACK.getIndex() );
         titleStyle.setFont( font );
 
         // create style for filters cells
@@ -166,7 +166,7 @@ public class ExcelBuilder extends AbstractExcelView {
         font.setFontName( "Arial" );
         font.setBold( true );
         font.setFontHeight( (short) (14 * 20) );
-        font.setColor( HSSFColor.BLACK.index );
+        font.setColor( HSSFColor.HSSFColorPredefined.BLACK.getIndex() );
         filterStyle.setFont( font );
 
         HSSFRow title = sheet.createRow( 0 );
@@ -261,13 +261,13 @@ public class ExcelBuilder extends AbstractExcelView {
 
 
     /**
-     * Método para crear una celda y ponerle el valor que va a contener deacuerdo al tipo de dato
+     * Mï¿½todo para crear una celda y ponerle el valor que va a contener deacuerdo al tipo de dato
      *
-     * @param row       Fila en la que se creará la celda
-     * @param value     Valor que se le asignará
-     * @param posicion  número de la columna en la fila (recordar que la primera celda tiene posición 0)
-     * @param esFormula TRUE para indicar si la celda contendrá una fórmula
-     * @param style     Estilo que se le aplicará a la celda
+     * @param row       Fila en la que se crearï¿½ la celda
+     * @param value     Valor que se le asignarï¿½
+     * @param posicion  nï¿½mero de la columna en la fila (recordar que la primera celda tiene posiciï¿½n 0)
+     * @param esFormula TRUE para indicar si la celda contendrï¿½ una fï¿½rmula
+     * @param style     Estilo que se le aplicarï¿½ a la celda
      */
     public static void createCell(HSSFRow row, Object value, int posicion, boolean esFormula, CellStyle style) {
         row.createCell( posicion );
@@ -293,15 +293,15 @@ public class ExcelBuilder extends AbstractExcelView {
     }
 
     /**
-     * Método para crear en orientación horizonta un rango de celdas en una hoja y ponerle el valor que va a contener deacuerdo al tipo de dato. Sobre una misma fila
+     * Mï¿½todo para crear en orientaciï¿½n horizonta un rango de celdas en una hoja y ponerle el valor que va a contener deacuerdo al tipo de dato. Sobre una misma fila
      *
-     * @param sheet          Hoja en la que se creará el rango de celdas combinadas
-     * @param row            Fila en la que se creará la celda
-     * @param value          Valor que se le asignará
-     * @param posicionInicio número de la columna en que iniciará la combinación de celdas (recordar que la primera celda tiene posición 0)
-     * @param posicionFin    número de la columna en que terminará la combinación de celdas
-     * @param esFormula      TRUE para indicar si la celda contendrá una fórmula
-     * @param style          Estilo que se le aplicará a cada celda dentro del rango
+     * @param sheet          Hoja en la que se crearï¿½ el rango de celdas combinadas
+     * @param row            Fila en la que se crearï¿½ la celda
+     * @param value          Valor que se le asignarï¿½
+     * @param posicionInicio nï¿½mero de la columna en que iniciarï¿½ la combinaciï¿½n de celdas (recordar que la primera celda tiene posiciï¿½n 0)
+     * @param posicionFin    nï¿½mero de la columna en que terminarï¿½ la combinaciï¿½n de celdas
+     * @param esFormula      TRUE para indicar si la celda contendrï¿½ una fï¿½rmula
+     * @param style          Estilo que se le aplicarï¿½ a cada celda dentro del rango
      */
     public static void createHorizontalCellRange(HSSFSheet sheet, HSSFRow row, Object value, int posicionInicio, int posicionFin, boolean esFormula, CellStyle style) {
         sheet.addMergedRegion( new CellRangeAddress( row.getRowNum(), row.getRowNum(), posicionInicio, posicionFin ) );
@@ -314,17 +314,17 @@ public class ExcelBuilder extends AbstractExcelView {
     }
 
     /**
-     * Método para crear en orientación vertical un rango de celdas en una hoja y ponerle el valor que va a contener deacuerdo al tipo de dato. Sobre una misma columna
+     * Mï¿½todo para crear en orientaciï¿½n vertical un rango de celdas en una hoja y ponerle el valor que va a contener deacuerdo al tipo de dato. Sobre una misma columna
      *
-     * @param sheet          Hoja en la que se creará el rango de celdas combinadas
-     * @param row            Fila en la que se creará la celda
-     * @param value          Valor que se le asignará
-     * @param posicionInicio número de la columna en que iniciará la combinación de celdas (recordar que la primera celda tiene posición 0)
-     * @param posicionFin    número de la columna en que terminará la combinación de celdas
-     * @param columna        columna sobre la que se aplicará la combinación
-     * @param posicionValue  posicion de la celda dentro del rango que va a contener el valor que se asignará
-     * @param esFormula      TRUE para indicar si la celda contendrá una fórmula
-     * @param style          Estilo que se le aplicará a cada celda dentro del rango
+     * @param sheet          Hoja en la que se crearï¿½ el rango de celdas combinadas
+     * @param row            Fila en la que se crearï¿½ la celda
+     * @param value          Valor que se le asignarï¿½
+     * @param posicionInicio nï¿½mero de la columna en que iniciarï¿½ la combinaciï¿½n de celdas (recordar que la primera celda tiene posiciï¿½n 0)
+     * @param posicionFin    nï¿½mero de la columna en que terminarï¿½ la combinaciï¿½n de celdas
+     * @param columna        columna sobre la que se aplicarï¿½ la combinaciï¿½n
+     * @param posicionValue  posicion de la celda dentro del rango que va a contener el valor que se asignarï¿½
+     * @param esFormula      TRUE para indicar si la celda contendrï¿½ una fï¿½rmula
+     * @param style          Estilo que se le aplicarï¿½ a cada celda dentro del rango
      */
     public static void createVerticalCellRange(HSSFSheet sheet, HSSFRow row, Object value, int posicionInicio, int posicionFin, int columna, int posicionValue, boolean esFormula, CellStyle style) {
         sheet.addMergedRegion( new CellRangeAddress( posicionInicio, posicionFin, columna, columna ) );

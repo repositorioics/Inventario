@@ -10,7 +10,7 @@
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<jsp:include page="../fragments/headTag.jsp" />
+<jsp:include page="../../fragments/headTag.jsp" />
 <!-- BEGIN PAGE LEVEL STYLES -->
 <spring:url value="/resources/plugins/data-tables/DT_bootstrap.css" var="dtbootcss" />
 <link rel="stylesheet" href="${dtbootcss}"/>
@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="${dtttcss}"/>
 <spring:url value="/resources/plugins/select2/select2_conquer.css" var="sel2css" />
 <link rel="stylesheet" type="text/css" href="${sel2css}"/>
+</head>
 <!-- END PAGE LEVEL STYLES -->
 <!-- END HEAD -->
 <!-- BEGIN BODY -->

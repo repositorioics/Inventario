@@ -80,7 +80,7 @@
 										<button class="close" data-close="alert"></button>
 										<spring:message code="form.errors" />
 									</div>
-									<div class="form-group">
+									<%--<div class="form-group">
 										<label class="control-label col-md-3"><spring:message code="equipName" />:
 										<span class="required">
 											 *
@@ -94,8 +94,8 @@
 												</c:forEach>
 											</select>
 										</div>
-									</div>
-									<div class="form-group">
+									</div>--%>
+									<%--<div class="form-group">
 										<label class="control-label col-md-3"><spring:message code="rackName" />:
 										<span class="required">
 											 *
@@ -106,7 +106,7 @@
 												<option value=""></option>
 											</select>
 										</div>
-									</div>
+									</div>--%>
 									<div class="form-group">
 									<label class="control-label col-md-3"><spring:message code="boxName" />:
 									</label>

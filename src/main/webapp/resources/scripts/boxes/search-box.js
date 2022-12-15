@@ -15,7 +15,7 @@ var SearchBox = function () {
             var error1 = $('.alert-danger', form1);
             var success1 = $('.alert-success', form1);  
             
-            $('#equipCode').change(
+        /*    $('#equipCode').change(
             		function() {
             			App.blockUI();
             			$.getJSON(parametros.racksUrl, {
@@ -34,21 +34,30 @@ var SearchBox = function () {
             				$('#rackCode').html(html);
             			});
             			App.unblockUI();
-                    });
+                    });*/
             
-            $('#rackCode').change(
+       /*     $('#rackCode').change(
             		function() {
             			 success1.show();
                          error1.hide();
                          table.fnClearTable();
                          searchBoxes();
-                    });
+                    });*/
             
-            $('#boxName').change(
+           $('#boxName').on("input",
             		function() {            			 
                          table.fnClearTable();
                          searchBoxesName();
                     });
+
+
+
+          /*  $('#boxName').on('keypress', function() {
+                table.fnClearTable();
+              searchBoxesName();xxxxxxxxxx
+            });*/
+
+
             
             var table  = $('#lista_boxes').DataTable({
                 // set the initial value
@@ -65,7 +74,7 @@ var SearchBox = function () {
                                ]
             });
     		
-            form1.validate({
+         /*   form1.validate({
                 errorElement: 'span', //default input error message container
                 errorClass: 'help-block', // default input error message class
                 focusInvalid: false, // do not focus the last invalid input
@@ -103,9 +112,9 @@ var SearchBox = function () {
                     table.fnClearTable();
                     searchBoxes();
                 }
-            });
+            });*/
             
-            function searchBoxes()
+       /*     function searchBoxes()
         	{
             	App.blockUI();
             	$.getJSON(parametros.boxesUrl, {
@@ -146,7 +155,7 @@ var SearchBox = function () {
 				    alert( "error" );
 				    App.unblockUI();
 				});
-        	}
+        	}*/
             
             function searchBoxesName()
         	{
